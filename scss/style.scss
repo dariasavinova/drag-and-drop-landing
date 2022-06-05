@@ -1,0 +1,229 @@
+.wrapper {
+	background-image: url('../img/bg.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	max-width: 1530px;
+	margin: 0 auto;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+		&__subtitle {
+			font-family: 'Futura';
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			font-size: 29px;
+			margin: 99px 0px 16px 0px;
+			color: #fff;
+		}
+
+		&__title {
+			display: inline-block;
+			font-family: 'LTC';
+			text-transform: uppercase;
+			font-size: 45px;
+			letter-spacing: 6px;
+			background-color: rgba(68, 107, 88, 0.7);
+			color: #fff;
+			padding: 15px 250px 12px 250px;
+			margin: 0px 0px 58px 0px;
+		}
+
+		&__info {
+			font-family: 'Futura';
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			font-size: 27px;
+			width: 900px;
+			line-height: 1.3;
+			margin: 0px 0px 40px 0px;
+			color: #fff;
+		}
+}
+
+.cards {
+	margin: 0px 0px 75px 0px;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		justify-items: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__item {
+		width: 200px;
+		cursor: pointer;
+	}
+}
+
+.margin {
+	margin: 0px 0px 0px 220px;
+}
+
+.drag {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 0px 0px 104px 0px;
+
+	&__title {
+		display: inline-block;
+		font-family: 'LTC';
+		text-transform: uppercase;
+		font-size: 45px;
+		letter-spacing: 6px;
+		background-color: rgba(68, 107, 88, 0.7);
+		color: #fff;
+		padding: 15px 200px 12px 200px;
+		margin: 0px 0px 58px 0px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(200px, 1fr));
+		grid-auto-flow: none;
+		justify-items: center;
+		align-items: center;
+		gap: 20px;
+		margin: 0px 0px 50px 0px;
+		overflow: hidden;
+	}
+
+	&__item {
+		width: 206px;
+		height: 244px;
+		background-color: rgba(0, 0, 0, 1);
+		border: 3px solid rgba(162, 125, 86, 0.3);
+
+		&:first-child {
+			margin: 0px 0px 0px 80px;
+		}
+
+		&:last-child {
+			margin: 0px 80px 0px 0px;
+		}
+	}
+
+	&__btn {
+		font-family: 'Futura';
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		font-size: 31px;
+		color: #fff;
+		background-color: transparent;
+		border: 5px solid #3D5F4E;
+		padding: 12px 380px;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: rgba(0,0,0,0.7);
+		}
+	}
+}
+
+.footer {
+	background-color: #192320;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin: -2px 0 0 0;
+
+	&__btn {
+		display: inline-block;
+		font-family: 'Futura';
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-size: 23px;
+		color: #fff;
+		background-color: #9A7147;
+		padding: 10px 50px;
+		margin: 50px 0px 30px 0px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #89643f;
+		}
+	}
+
+	&__info {
+		font-family: 'Calibre-Light';
+		font-size: 19px;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0px 0px 5px 0px;
+		letter-spacing: 2px;
+	}
+
+	&__creators {
+		font-family: 'Calibre-Medium';
+		font-size: 21px;
+		text-transform: uppercase;
+		color: #fff;
+		letter-spacing: 2px;
+		margin: 0px 0px 60px 0px;
+	}
+}
+
+.dragging {
+	opacity: 0.3;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 420px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 909px;
+	height: 300px;
+	background-color: rgba(0, 0, 0, 0.8);
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&__btn {
+		position: absolute;
+		background: transparent;
+		top: 0;
+		right: 0;
+		img {
+			width: 70px;
+		}
+	}
+	
+	&__title {
+		font-family: 'LTC';
+		font-size: 48px;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		margin: 100px 0px 10px 0px;
+	}
+
+	&__info {
+		font-family: 'Futura';
+		font-size: 26px;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
